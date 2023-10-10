@@ -1,4 +1,4 @@
-var timer = 60;
+var timer = 6;
 var score = 0;
 var hitrn = 0;
 
@@ -30,7 +30,7 @@ function runTimer() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerint);
-      document.querySelector("#pbtm").innerHTML = `<h1>Game over</h1>`;
+      document.querySelector("#pbtm").innerHTML = `<h1>GAME-OVER</>`;
     }
   }, 1000);
 }
