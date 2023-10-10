@@ -5,7 +5,7 @@ function getNewHit(){
  document.querySelector("#hitval").textContent = rn;
 }
 
-function Makebubble() {
+function makebubble() {
   var clutter = "";
   for (i = 1; i <= 85; i++) {
     var rn = Math.floor(Math.random() * 10);
@@ -27,5 +27,5 @@ function runTimer() {
 }
 
 getNewHit();
-Makebubble();
+makebubble();
 runTimer();
