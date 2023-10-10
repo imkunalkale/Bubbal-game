@@ -1,8 +1,16 @@
 var timer = 60;
+var score = 0;
+var hitrn = 0;
+
+function increaseScore(){
+  score += 10;
+  document.querySelector("#scoreval").textContent = score;
+}
+
 
 function getNewHit(){
- var rn = Math.floor(Math.random()*10);
- document.querySelector("#hitval").textContent = rn;
+ hitrn = Math.floor(Math.random()*10);
+ document.querySelector("#hitval").textContent = hitrn;
 }
 
 function makebubble() {
@@ -22,10 +30,22 @@ function runTimer() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerint);
+      document.querySelector("#pbtm").innerHTML = `<h1>Game over</h1>`;
     }
   }, 1000);
 }
 
+document.querySelector("#pbtm")
+.addEventListener("click", function(dets){
+var clickednum = Number(dets.target.textContent);
+if(clickednum === hitrn)
+increaseScore();
+makebubble();
+getNewHit();
+});
+
+
+// call functions 
 getNewHit();
 makebubble();
 runTimer();
