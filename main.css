@@ -71,7 +71,7 @@ body {
   height: 80%;
 }
 
-.bubbal{
+.bubble{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +81,7 @@ body {
   border-radius: 50%;
 }
 
-.bubbal:hover{
+.bubble:hover{
   background-color: #2b412b;
   cursor: pointer;
   border-color: #000000;
